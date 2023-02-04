@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import WhiteTLogo from '/images/logos/white-text.png';
+import WhiteTLogo from '/images/logos/logo-v1.png';
 </script>
 
 <template>

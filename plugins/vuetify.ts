@@ -5,6 +5,9 @@ import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import VueTablerIcons from 'vue-tabler-icons';
 import '@/assets/scss/style.scss';
+import { createI18n } from 'vue-i18n'
+import _th from '../static/lang/th.json'
+import _en from '../static/lang/en.json'
 
 const Lighttheme: ThemeDefinition = {
   colors: {
@@ -49,7 +52,7 @@ const Lighttheme: ThemeDefinition = {
     'error-lighten-5': '#fce2e5',
     'primary-lighten-5': '#e6edfd',
     'accent-lighten-5': '#f4e6fd',
-    
+
   },
 };
 export default defineNuxtPlugin((nuxtApp) => {
@@ -64,6 +67,17 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
     },
   });
+
+  const i18n = createI18n({
+    legacy: false,
+    globalInjection: true,
+    locale: 'en',
+    messages: {
+      en: _en,
+      th: _th
+    }
+  })
+  nuxtApp.vueApp.use(i18n);
   nuxtApp.vueApp.use(vuetify);
   nuxtApp.vueApp.use(VueTablerIcons);
 });

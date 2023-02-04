@@ -7,7 +7,7 @@ const drawer = ref(null);
     <!-- -----------------------------------------------
           Start Header
     ----------------------------------------------- -->
-    <v-app-bar class="app-header pt-lg-0 pt-3" absolute flat elevate-on-scroll>
+    <v-app-bar class="app-header  v-theme--light v-app-bar" absolute flat elevate-on-scroll>
       <v-container class="fill-height">
         <v-toolbar class="bg-transparent d-flex align-center">
           <!-- Logo -->
@@ -20,21 +20,21 @@ const drawer = ref(null);
           >
             <ul class="d-flex navbar-nav">
               <li class="nav-item">
-                <NuxtLink class="nav-link " to="/"> Custom Components </NuxtLink>
+                <NuxtLink class="nav-link " to="/"> {{ $t('menu.product') }} </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink class="nav-link" to="/basic-components"
-                  >Basic Components</NuxtLink
+                <NuxtLink class="nav-link" to="/basic-components">{{ $t('menu.contact') }}</NuxtLink
                 >
               </li>
-              <li class="nav-item d-md-flex d-sm-none">
-                <!-- login-regiter -->
-                <v-btn
-                  class="btn bg-white"
-                  flat
-                >
-                  <NuxtLink to="https://www.wrappixel.com/templates/nextkit-nuxtjs-free-uikit/" target="_blank" class="text-decoration-none text-dark">Download Free</NuxtLink>
-                </v-btn>
+              <li class="nav-item">
+                <v-chip class="ma-2" color="swarning"> +66 83-751-3888 </v-chip>
+              </li>
+
+              <li class="nav-item">
+                <select id="locale-select" style="color: #FFF;" v-model="$i18n.locale">
+                  <option value="en">EN</option>
+                  <option value="th">TH</option>
+                </select>
               </li>
             </ul>
           </div>
@@ -51,6 +51,8 @@ const drawer = ref(null);
     ----------------------------------------------- -->
   </div>
   <!----sidebar menu drawer start----->
+
+
   <v-navigation-drawer v-model="drawer" temporary>
     <ul class="navbar-nav py-4 ">
       <li class="nav-item mb-3">

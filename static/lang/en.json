@@ -1,0 +1,16 @@
+{
+    "welcome": "Hello",
+    "menu": {
+        "product": "Product",
+        "contact": "Contact"
+    },
+    "loginform": {
+        "user": "ผู้ใช้ระบบ",
+        "password": "รหัสผ่าน"
+    },
+    "hero_quote": "We are importers and distributors of high quality biomass pellets.",
+    "company": {
+        "name": "SOT. BIOENERGY"
+    },
+    "quotation": "Quotation"
+}

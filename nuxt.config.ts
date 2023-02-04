@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         transpile: ["vuetify"],
       },
     modules: [
-      '@pinia/nuxt',
+      '@pinia/nuxt'
     ],
     vite: {
       define: {
@@ -22,8 +22,8 @@ export default defineNuxtConfig({
     devServerHandlers: [],
     hooks: {
     },
-  
+
+
   })
 
 
-  
